@@ -2,6 +2,7 @@
 import Badge from '@/components/Badge.astro';
 import Social from '@/components/Social.astro';
 import Experience from '@/components/Experience.astro';
+import SectionContainer from '@/components/SectionContainer.astro';
 
 import Layout from '@/layouts/Layout.astro';
 
@@ -10,6 +11,8 @@ import LinkedIn from '@/components/Icons/LinkedIn.astro';
 import Github from '@/components/Icons/Github.astro';
 import MailIcon from '@/components/Icons/Mail.astro';
 import Instagram from '@/components/Icons/Instagram.astro';
+import Briefcase from '@/components/Icons/Briefcase.astro';
+
 ---
 
 <Layout 
@@ -18,21 +21,27 @@ import Instagram from '@/components/Icons/Instagram.astro';
 >
 	<main>
 
-	<section class="w-full lg:w-[740px] mx-auto py-44">
+	<SectionContainer class="py-44 pb-24">
 
-		<img class="rounded-full size-14 mb-4" src="https://avatars.githubusercontent.com/u/70737121?v=4" alt="BartoDev Photo">
+		<img class="rounded-full size-14 mb-4 hover:scale-[2.3] transition hover:-translate-y-8 transition" src="https://avatars.githubusercontent.com/u/70737121?v=4" alt="BartoDev Photo">
 
-		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10 relative group">
-			Buenas! soy 
-			<span class="relative inline-block group-hover:text-white transition-all duration-300">
+		<div class="group relative w-fit">
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+			  Buenas! soy 
+			  <span class="relative inline-block group-hover:text-white transition-all duration-300 ml-2">
 				BartoDev
 				<span class="absolute left-0 top-2/3 w-full h-[4px] bg-red-400 origin-left scale-x-0 group-hover:scale-x-105 transition-transform duration-300 rotate-[355deg]"></span>
-			</span>
-			<span class="absolute -top-8 left-0 opacity-0 mx-48 text-3xl text-green-400 group-hover:opacity-100 transition-opacity duration-300">
-				Gastón Bartucci Peredo
-			</span>
+			  </span>
 			<a href="https://www.linkedin.com/in/gaston-bartucci-peredo/" target="_blank" rel="noopener" class="flex justify-center items-center py-4"><Badge>Se aceptan chambas</Badge></a>
 		</h1>
+
+		<span class="absolute -top-8 left-48 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+			<span
+			  class="text-3xl text-green-400 font-mono block overflow-hidden whitespace-nowrap border-r-2 border-green-400 w-0 group-hover:w-full group-hover:animate-typewriter transition-[width] duration-0">
+			  Gastón Bartucci Peredo
+			</span>
+		  </span>
+		</div>
 
 		<h2 class="text-xl opacity-90text-wrap">+15 años de experiencia como <span class="text-green-200 hover:text-green-300 transition">Desarrollador Frontend, Backend y Devops. </span><br>
 		De Buenos Aires, Argentina <span class="bg-sky-400 text-sky-400 rounded-l-md">//</span><span class="bg-sky-50"><span class="text-yellow-400">☀</span></span><span class="bg-sky-400 text-sky-400 rounded-r-md">//</span>.
@@ -55,11 +64,15 @@ import Instagram from '@/components/Icons/Instagram.astro';
 				<Instagram class="size-6"/> gastonbperedo
 			</Social>
 		</nav>
-	</section>
+	</SectionContainer>
 
-	<section>
+	<SectionContainer>
+		<h2 class="text-2xl font-semibold mb-6">
+			<Briefcase />
+			Experiencia laboral
+		</h2>
 		<Experience />
-	</section>
+	</SectionContainer>
 
 	</main>
 </Layout>
