@@ -1,8 +1,9 @@
 ---
-import Badge from '@/components/Badge.astro';
 import Social from '@/components/Social.astro';
 import Experience from '@/components/Experience.astro';
+import Projects from '@/components/Projects.astro';
 import SectionContainer from '@/components/SectionContainer.astro';
+import DataPlus from '@/components/DataPlus.astro';
 
 import Layout from '@/layouts/Layout.astro';
 
@@ -12,66 +13,77 @@ import Github from '@/components/Icons/Github.astro';
 import MailIcon from '@/components/Icons/Mail.astro';
 import Instagram from '@/components/Icons/Instagram.astro';
 import Briefcase from '@/components/Icons/Briefcase.astro';
-
+import ProjectsIcon from '@/components/Icons/Projects.astro';
 ---
 
 <Layout 
-		title="Porfolio de BartoDev - Desarrrollador y Programador Web con mas de 15 de Expeiencia"
+		title="Porfolio de BartoDev - Desarrrollador y Programador Web con mas de 15 de Experiencia"
 		description="Contrata a BartoDev para cualquier tipo de Desarrollo. Desarrollador Frontend, Backend y Devops. Especializado en crear todo tipo de Aplicaciones Web e Implementaciones."
 >
-	<main>
+	<main class="px-2">
 
-	<SectionContainer class="py-44 pb-24">
-
-		<img class="rounded-full size-14 mb-4 hover:scale-[2.3] transition hover:-translate-y-8 transition" src="https://avatars.githubusercontent.com/u/70737121?v=4" alt="BartoDev Photo">
+	<SectionContainer class="py-20 md:py-36 lg:py-44 pb-24">
+		
+	
+			
+			<DataPlus />
 
 		<div class="group relative w-fit">
-			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+			<h1 class="text-white text-xl sm:text-2xl lg:text-5xl font-bold flex flex-wrap gap-x-2 sm:gap-x-4 pb-0 lg:pb-6">
 			  Buenas! soy 
-			  <span class="relative inline-block group-hover:text-white transition-all duration-300 ml-2">
+			  <span class="relative right-3 lg:right-1 inline-block group-hover:text-white transition-all duration-300 ml-2">
 				BartoDev
-				<span class="absolute left-0 top-2/3 w-full h-[4px] bg-red-400 origin-left scale-x-0 group-hover:scale-x-105 transition-transform duration-300 rotate-[355deg]"></span>
+				<span class="absolute left-0 top-2/3 w-full h-[2px] lg:h-[4px] bg-red-400 origin-left scale-x-0 group-hover:scale-x-105 transition-transform duration-300 rotate-[355deg]"></span>
 			  </span>
-			<a href="https://www.linkedin.com/in/gaston-bartucci-peredo/" target="_blank" rel="noopener" class="flex justify-center items-center py-4"><Badge>Se aceptan chambas</Badge></a>
 		</h1>
 
-		<span class="absolute -top-8 left-48 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+		<span class="absolute -top-8 left-32 lg:left-48 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
 			<span
-			  class="text-3xl text-green-400 font-mono block overflow-hidden whitespace-nowrap border-r-2 border-green-400 w-0 group-hover:w-full group-hover:animate-typewriter transition-[width] duration-0">
+			  class="text-xl sm:text-2xl lg:text-3xl text-green-400 font-mono block overflow-hidden whitespace-nowrap border-r-2 border-green-400 w-0 group-hover:w-full group-hover:animate-typewriter transition-[width] duration-0">
 			  Gastón Bartucci Peredo
 			</span>
 		  </span>
 		</div>
+		
 
-		<h2 class="text-xl opacity-90text-wrap">+15 años de experiencia como <span class="text-green-200 hover:text-green-300 transition">Desarrollador Frontend, Backend y Devops. </span><br>
-		De Buenos Aires, Argentina <span class="bg-sky-400 text-sky-400 rounded-l-md">//</span><span class="bg-sky-50"><span class="text-yellow-400">☀</span></span><span class="bg-sky-400 text-sky-400 rounded-r-md">//</span>.
+		<h2 class="text-base sm:text-lg lg:text-xl opacity-90 mt-6 text-pretty">+15 años de experiencia como <span class="text-green-200 hover:text-green-300 transition">Desarrollador Frontend, Backend y Devops. </span><br>
+		De Buenos Aires, Argentina <span class="bg-sky-400 text-sky-400 rounded-l-md">//</span><span class="bg-sky-50"><span class="relative bottom-[1px] lg:bottom-[3px] -translate-x-1 text-sm text-yellow-400">☀</span></span><span class="bg-sky-400 text-sky-400 rounded-r-md">//</span>.
 		<br> <span class="opacity-80"> Especializado en crear todo tipo de <span class="underline decoration-red-200 hover:decoration-red-300 transition">Soluciones</span>💡 e <span class="underline decoration-red-200 hover:decoration-red-300 transition">Implementaciones</span>🛠️.</span></h2>
 		
-		<nav class="flex gap-x-2 mt-6">
-			<Social href="https://www.linkedin.com/in/gaston-bartucci-peredo/">
-				<LinkedIn class="size-6"/> LinkedIn
-			</Social>
-			
-			<Social href="https://github.com/TheBartogx">
-				<Github class="size-6"/> Github
-			</Social>
+		<nav class="flex flex-row gap-3 mt-8 flex-wrap">
+					<Social href="https://www.linkedin.com/in/gaston-bartucci-peredo/">
+						<LinkedIn class="size-4 lg:size-6"/> LinkedIn
+					</Social>
+					
+					<Social href="https://github.com/TheBartogx">
+						<Github class="size-4 lg:size-6"/> Github
+					</Social>
 
-			<Social href="gastonbperedo@bartodev.com">
-				<MailIcon class="size-6"/> gastonbperedo@bartodev.com
-			</Social>
-			
-			<Social href="https://www.instagram.com/gastonbperedo/">
-				<Instagram class="size-6"/> gastonbperedo
-			</Social>
+					<Social href="mailto:gastonbperedo@bartodev.com">
+						<MailIcon class="size-4 lg:size-6"/> gastonbperedo@bartodev.com
+					</Social>
+				
+					<Social href="https://www.instagram.com/gastonbperedo/">
+						<Instagram class="size-4 lg:size-6"/> gastonbperedo
+					</Social>
 		</nav>
+
 	</SectionContainer>
 
-	<SectionContainer>
-		<h2 class="text-2xl font-semibold mb-6">
-			<Briefcase />
+	<SectionContainer id="Experiencie" class="pb-20">
+		<h2 class="text-xl sm:text-3xl font-semibold mb-4 sm:mb-6 flex gap-x-2 items-center">
+			<Briefcase class="size-7"/>
 			Experiencia laboral
 		</h2>
 		<Experience />
+	</SectionContainer>
+
+	<SectionContainer id="projects">
+		<h2 class="text-xl sm:text-3xl font-semibold mb-4 sm:mb-6 flex gap-x-2 items-center">
+			<ProjectsIcon class="size-7"/>
+			Proyectos
+		</h2>
+		<Projects />
 	</SectionContainer>
 
 	</main>

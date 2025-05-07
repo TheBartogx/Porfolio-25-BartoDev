@@ -1,0 +1,75 @@
+---
+import HtmlIcon from './Icons/Html.astro'
+import CssIcon from './Icons/Css.astro'
+import JavaScriptIcon from './Icons/JavaScript.astro'
+
+const TAGS = {
+    HTML: {
+        name:"HTML",
+        class: "bg-[#F16529]",
+        icons: HtmlIcon,
+    },
+    CSS: {
+        name:"CSS",
+        class: "bg-[#2965F1]",
+        icons: CssIcon,
+    },
+    JavaScript: {
+        name:"JavaScript",
+        class: "bg-[#F7DF1E]",
+        icons: JavaScriptIcon,
+    },
+}
+
+const PROJECTS = [
+    {
+        title: 'Aplicacion UI con Tailwind CSS',
+        description: 'Get access to over 20+ pages including a dashboarrd layout, charts, kaban board, calendar, and preorder Ecommerce & Marketing pages',
+        link: '#',
+        github:'#',
+        image:"https://placehold.co/400x300/000000/FFFFFF",
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript]
+    },
+    {
+        title: 'Aplicacion UI con Tailwind CSS',
+        description: 'Get access to over 20+ pages including a dashboarrd layout, charts, kaban board, calendar, and preorder Ecommerce & Marketing pages',
+        link: '#',
+        github:'#',
+        image:"https://placehold.co/400x300/000000/FFFFFF",
+        tags: [TAGS.CSS]
+    },
+    {
+        title: 'Aplicacion UI con Tailwind CSS',
+        description: 'Get access to over 20+ pages including a dashboarrd layout, charts, kaban board, calendar, and preorder Ecommerce & Marketing pages',
+        link: '#',
+        github:'#',
+        image:"https://placehold.co/400x300/000000/FFFFFF",
+        tags: [TAGS.HTML]
+    }
+]
+---
+       
+    {
+        PROJECTS.map(({ image, title, description, tags }) => (
+            <article class="pb-8">
+                <h3 class="text-2xl font-semibold text-green-200 mb-2">{title}</h3>
+                <p class="text-lg mb-4 text-pretty">{description}</p>
+                <ul class="flex gap-x-2 flex-row aling-center">
+                    {tags.map((tag) =>(
+                        <li>
+                            <span class={`flex rounded-full font-semibold cursor-default text-xs opacity-80 ${tag.class} p-[2px]  hover:opacity-100 transition`}>
+                                <span class="flex gap-x-1 py-1 px-2 rounded-full bg-black text-gray-300">
+                                    <tag.icons class="size-4 "/>
+                                    {tag.name}
+                                </span>
+                            </span>
+                            
+                        </li>
+                    ))}
+                </ul>
+                <img class="rounded-lg shadow-2xl shadow-gray-950" src={image} alt={`Captura de pantalla del proyecto ${title}`} />
+            </article>
+        ))
+    }
+
+
